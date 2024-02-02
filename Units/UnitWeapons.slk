@@ -15276,10 +15276,10 @@ C;X16;K"WoodMediumBash"
 C;X17;K"air,debris,ground,item,structure,ward"
 C;X18;K1
 C;X19;K150
-C;X21;K250
+C;X21;K350
 C;X22;K"hero"
 C;X23;K"normal"
-C;X24;K1.7
+C;X24;K1.85
 C;X26;K2
 C;X27;K6
 C;X28;K30
