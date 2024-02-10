@@ -2416,6 +2416,10 @@ Buffubertip=This unit is invisible, moves faster, and applies damage over time t
 Bufftip=相位行走
 Buffubertip=该单位在移动时能够能够穿透其他单位，同时移动速度也有所提升
 EditorName=Phase (boots)
+[B19Y]
+Bufftip=相位行走
+Buffubertip=该单位在移动时能够能够穿透其他单位，同时移动速度也有所提升
+EditorName=Phase (boots)
 [B0A5]
 Bufftip=隐身
 Buffubertip=该单位会在短时间内不可见
