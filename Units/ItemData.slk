@@ -1837,7 +1837,7 @@ C;X20;K1
 C;X21;K1
 C;X22;K1
 C;X24;K700
-C;X26;K1
+C;X26;K55555
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\CrystalShard\CrystalShard.mdl"
 C;X30;K1
@@ -8464,7 +8464,7 @@ C;X15;K1
 C;X20;K1
 C;X21;K1
 C;X22;K1
-C;X26;K500
+C;X26;K999999999
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\tomeBrown\tomeBrown.mdl"
 C;X30;K1
@@ -9590,7 +9590,7 @@ C;X15;K1
 C;X20;K1
 C;X21;K1
 C;X22;K1
-C;X26;K75
+C;X26;K55555
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\tomeBrown\tomeBrown.mdl"
 C;X30;K1
@@ -10464,6 +10464,7 @@ C;X16;K1
 C;X17;K1
 C;X21;K1
 C;X22;K1
+C;X24;K3150
 C;X26;K75
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\tomeBrown\tomeBrown.mdl"
@@ -13504,6 +13505,7 @@ C;X16;K1
 C;X17;K1
 C;X21;K1
 C;X22;K1
+C;X24;K3850
 C;X26;K75
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\tomeBrown\tomeBrown.mdl"
@@ -15007,7 +15009,7 @@ C;X12;K200
 C;X20;K1
 C;X21;K1
 C;X22;K1
-C;X26;K500
+C;X26;K999999999
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\tomeBrown\tomeBrown.mdl"
 C;X30;K1
@@ -15798,7 +15800,7 @@ C;X20;K1
 C;X21;K1
 C;X22;K1
 C;X24;K900
-C;X26;K1
+C;X26;K55555
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\CrystalShard\CrystalShard.mdl"
 C;X30;K1
@@ -15830,7 +15832,7 @@ C;X15;K1
 C;X20;K1
 C;X21;K1
 C;X22;K1
-C;X26;K75
+C;X26;K55555
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\tomeBrown\tomeBrown.mdl"
 C;X30;K1
@@ -16337,6 +16339,7 @@ C;X16;K1
 C;X17;K1
 C;X21;K1
 C;X22;K1
+C;X24;K1785
 C;X26;K75
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\tomeBrown\tomeBrown.mdl"
