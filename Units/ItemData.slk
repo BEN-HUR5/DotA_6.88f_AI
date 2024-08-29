@@ -1115,7 +1115,7 @@ C;X17;K1
 C;X19;K1
 C;X21;K1
 C;X22;K1
-C;X26;K75
+C;X26;K999999999
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\CrystalShard\CrystalShard.mdl"
 C;X30;K1
@@ -1837,7 +1837,7 @@ C;X20;K1
 C;X21;K1
 C;X22;K1
 C;X24;K700
-C;X26;K55555
+C;X26;K999999999
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\CrystalShard\CrystalShard.mdl"
 C;X30;K1
@@ -5793,7 +5793,7 @@ C;X20;K1
 C;X21;K1
 C;X22;K1
 C;X24;K6200
-C;X26;K500
+C;X26;K999999999
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\tomeBrown\tomeBrown.mdl"
 C;X30;K1
@@ -5811,7 +5811,7 @@ C;X17;K1
 C;X19;K1
 C;X21;K1
 C;X22;K1
-C;X26;K500
+C;X26;K999999999
 C;X28;K"Wood"
 C;X29;K"war3mapImported\treasurechest_Standonly.mdl"
 C;X30;K1
@@ -9590,7 +9590,7 @@ C;X15;K1
 C;X20;K1
 C;X21;K1
 C;X22;K1
-C;X26;K55555
+C;X26;K999999999
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\tomeBrown\tomeBrown.mdl"
 C;X30;K1
@@ -14973,7 +14973,7 @@ C;X17;K1
 C;X19;K1
 C;X21;K1
 C;X22;K1
-C;X26;K500
+C;X26;K999999999
 C;X28;K"Wood"
 C;X29;K"war3mapImported\treasurechest_Standonly.mdl"
 C;X30;K1
@@ -14992,7 +14992,7 @@ C;X20;K1
 C;X21;K1
 C;X22;K1
 C;X24;K6200
-C;X26;K500
+C;X26;K999999999
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\tomeBrown\tomeBrown.mdl"
 C;X30;K1
@@ -15800,7 +15800,7 @@ C;X20;K1
 C;X21;K1
 C;X22;K1
 C;X24;K900
-C;X26;K55555
+C;X26;K999999999
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\CrystalShard\CrystalShard.mdl"
 C;X30;K1
@@ -15816,7 +15816,7 @@ C;X17;K1
 C;X19;K1
 C;X21;K1
 C;X22;K1
-C;X26;K75
+C;X26;K999999999
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\CrystalShard\CrystalShard.mdl"
 C;X30;K1
@@ -15832,7 +15832,7 @@ C;X15;K1
 C;X20;K1
 C;X21;K1
 C;X22;K1
-C;X26;K55555
+C;X26;K999999999
 C;X28;K"Wood"
 C;X29;K"Objects\InventoryItems\tomeBrown\tomeBrown.mdl"
 C;X30;K1
