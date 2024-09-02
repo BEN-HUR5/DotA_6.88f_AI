@@ -72440,7 +72440,7 @@ C;Y3936;X1;K"A2PH"
 C;X2;K"AOac"
 C;X11;K1
 C;X12;K1
-C;X15;K"air,ground,friend,nonself,vuln,invu"
+C;X15;K"air,ground,friend,vuln,invu"
 C;X21;K900
 C;X23;K0.75
 C;X24;K1
@@ -72450,7 +72450,7 @@ C;Y3937;X1;K"A2PI"
 C;X2;K"AOac"
 C;X11;K1
 C;X12;K1
-C;X15;K"air,ground,friend,nonself,vuln,invu"
+C;X15;K"air,ground,friend,vuln,invu"
 C;X21;K900
 C;X23;K1
 C;X24;K1
@@ -72460,7 +72460,7 @@ C;Y3938;X1;K"A2PJ"
 C;X2;K"AOac"
 C;X11;K1
 C;X12;K1
-C;X15;K"air,ground,friend,nonself,vuln,invu"
+C;X15;K"air,ground,friend,vuln,invu"
 C;X21;K900
 C;X23;K1.25
 C;X24;K1
