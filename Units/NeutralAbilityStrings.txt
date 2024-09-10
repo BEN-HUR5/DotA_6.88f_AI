@@ -6167,3 +6167,18 @@ buffubertip=信使由于运送了未满的魔瓶，移动速度被降低了。
 [B0HY]
 bufftip=|c0000ff00无光之盾|r
 buffubertip=这个单位受到无光之盾的保护。
+[BFG0]
+Bufftip=Flesh Golem.
+Buffubertip=You're slowed based on your proximity to Dirge.
+[BFG1]
+Bufftip=Flesh Golem.
+Buffubertip=You're slowed based on your proximity to Dirge.
+[BFG2]
+Bufftip=Flesh Golem.
+Buffubertip=You're slowed based on your proximity to Dirge.
+[BFG3]
+Bufftip=Flesh Golem.
+Buffubertip=You're slowed based on your proximity to Dirge.
+[BFG4]
+Bufftip=Flesh Golem.
+Buffubertip=You're slowed based on your proximity to Dirge.

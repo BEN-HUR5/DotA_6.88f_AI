@@ -2784,3 +2784,45 @@ buffubertip=单位处于回光返照状态，期间所受伤害会转化成为�
 [B0HZ]
 Bufftip=地狱烈刃
 Buffubertip=地狱烈刃
+[AFGA]
+Name=瘟疫
+Tip=瘟疫 - [|cffffcc00等级 1|r],瘟疫 - [|cffffcc00等级 2|r],瘟疫 - [|cffffcc00等级 3|r],Last Word  - [|cffffcc00Level 4|r]
+Ubertip=血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高20（25）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高25（30）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高30（35）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,Silences opponents for 4 seconds after they finish casting a spell. Has a 700 AOE.
+Researchtip=学习 遗言[|cffffcc00L|r] - [|cffffcc00等级 %d|r]|n(Last Word)
+Researchubertip=Causes any unit under the effect of this aura to become silenced after it finishes casting a spell. Has a 700 AOE. |n|n|cffffcc00Level 1|r - 1 second. |n|cffffcc00Level 2|r - 2 seconds. |n|cffffcc00Level 3|r - 3 seconds. |n|cffffcc00Level 4|r - 4 seconds.
+Researchhotkey=L
+[AFG0]
+Name=瘟疫
+Tip=瘟疫 - [|cffffcc00等级 1|r],瘟疫 - [|cffffcc00等级 2|r],瘟疫 - [|cffffcc00等级 3|r],Last Word  - [|cffffcc00Level 4|r]
+Ubertip=血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高20（25）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高25（30）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高30（35）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,Silences opponents for 4 seconds after they finish casting a spell. Has a 700 AOE.
+Researchtip=学习 遗言[|cffffcc00L|r] - [|cffffcc00等级 %d|r]|n(Last Word)
+Researchubertip=Causes any unit under the effect of this aura to become silenced after it finishes casting a spell. Has a 700 AOE. |n|n|cffffcc00Level 1|r - 1 second. |n|cffffcc00Level 2|r - 2 seconds. |n|cffffcc00Level 3|r - 3 seconds. |n|cffffcc00Level 4|r - 4 seconds.
+Researchhotkey=L
+[AFG1]
+Name=瘟疫
+Tip=瘟疫 - [|cffffcc00等级 1|r],瘟疫 - [|cffffcc00等级 2|r],瘟疫 - [|cffffcc00等级 3|r],Last Word  - [|cffffcc00Level 4|r]
+Ubertip=血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高20（25）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高25（30）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高30（35）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,Silences opponents for 4 seconds after they finish casting a spell. Has a 700 AOE.
+Researchtip=学习 遗言[|cffffcc00L|r] - [|cffffcc00等级 %d|r]|n(Last Word)
+Researchubertip=Causes any unit under the effect of this aura to become silenced after it finishes casting a spell. Has a 700 AOE. |n|n|cffffcc00Level 1|r - 1 second. |n|cffffcc00Level 2|r - 2 seconds. |n|cffffcc00Level 3|r - 3 seconds. |n|cffffcc00Level 4|r - 4 seconds.
+Researchhotkey=L
+[AFG2]
+Name=瘟疫
+Tip=瘟疫 - [|cffffcc00等级 1|r],瘟疫 - [|cffffcc00等级 2|r],瘟疫 - [|cffffcc00等级 3|r],Last Word  - [|cffffcc00Level 4|r]
+Ubertip=血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高20（25）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高25（30）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高30（35）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,Silences opponents for 4 seconds after they finish casting a spell. Has a 700 AOE.
+Researchtip=学习 遗言[|cffffcc00L|r] - [|cffffcc00等级 %d|r]|n(Last Word)
+Researchubertip=Causes any unit under the effect of this aura to become silenced after it finishes casting a spell. Has a 700 AOE. |n|n|cffffcc00Level 1|r - 1 second. |n|cffffcc00Level 2|r - 2 seconds. |n|cffffcc00Level 3|r - 3 seconds. |n|cffffcc00Level 4|r - 4 seconds.
+Researchhotkey=L
+[AFG3]
+Name=瘟疫
+Tip=瘟疫 - [|cffffcc00等级 1|r],瘟疫 - [|cffffcc00等级 2|r],瘟疫 - [|cffffcc00等级 3|r],Last Word  - [|cffffcc00Level 4|r]
+Ubertip=血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高20（25）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高25（30）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高30（35）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,Silences opponents for 4 seconds after they finish casting a spell. Has a 700 AOE.
+Researchtip=学习 遗言[|cffffcc00L|r] - [|cffffcc00等级 %d|r]|n(Last Word)
+Researchubertip=Causes any unit under the effect of this aura to become silenced after it finishes casting a spell. Has a 700 AOE. |n|n|cffffcc00Level 1|r - 1 second. |n|cffffcc00Level 2|r - 2 seconds. |n|cffffcc00Level 3|r - 3 seconds. |n|cffffcc00Level 4|r - 4 seconds.
+Researchhotkey=L
+[AFG4]
+Name=瘟疫
+Tip=瘟疫 - [|cffffcc00等级 1|r],瘟疫 - [|cffffcc00等级 2|r],瘟疫 - [|cffffcc00等级 3|r],Last Word  - [|cffffcc00Level 4|r]
+Ubertip=血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高20（25）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高25（30）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高30（35）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,Silences opponents for 4 seconds after they finish casting a spell. Has a 700 AOE.
+Researchtip=学习 遗言[|cffffcc00L|r] - [|cffffcc00等级 %d|r]|n(Last Word)
+Researchubertip=Causes any unit under the effect of this aura to become silenced after it finishes casting a spell. Has a 700 AOE. |n|n|cffffcc00Level 1|r - 1 second. |n|cffffcc00Level 2|r - 2 seconds. |n|cffffcc00Level 3|r - 3 seconds. |n|cffffcc00Level 4|r - 4 seconds.
+Researchhotkey=L
