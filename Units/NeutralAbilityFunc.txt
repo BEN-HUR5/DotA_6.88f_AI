@@ -6140,7 +6140,7 @@ buffart=ReplaceableTextures\CommandButtons\BTNLightningShield
 [B0I0]
 Buffart=ReplaceableTextures\CommandButtons\BTNDeathStench.blp
 Targetart=effects\runicbreath.mdx
-Targetattach=chest
+Targetattach=head
 [B0I1]
 Buffart=ReplaceableTextures\CommandButtons\BTNDeathStench.blp
 Targetart=effects\runicbreath.mdx
@@ -6148,12 +6148,12 @@ Targetattach=chest
 [B0I2]
 Buffart=ReplaceableTextures\CommandButtons\BTNDeathStench.blp
 Targetart=effects\runicbreath.mdx
-Targetattach=chest
+Targetattach=hand,left
 [B0I3]
 Buffart=ReplaceableTextures\CommandButtons\BTNDeathStench.blp
 Targetart=effects\runicbreath.mdx
-Targetattach=chest
+Targetattach=hand,right
 [B0I4]
 Buffart=ReplaceableTextures\CommandButtons\BTNDeathStench.blp
 Targetart=effects\runicbreath.mdx
-Targetattach=chest
+Targetattach=origin
