@@ -1409,19 +1409,13 @@ Researchtip=学习 电子涡流[|cffffcc00E|r] - [|cffffcc00等级 %d|r]|n(Elect
 Researchubertip=风暴之灵聚集他的能量，以自身速度降低的代价，创造出涡流，将一个敌人牵引过来，同时风暴之灵自身的速度会降低50%，持续3秒。|n|n|c00fffc01神杖升级：变为范围牵引|r|n|n|cff99ccff施法距离：|r300|n|cff99ccff冷却时间：|r21/20/19/18|n|cff99ccff魔法消耗：|r85|n|n|cffffcc00等级 1|r - 牵引时间1秒|n|cffffcc00等级 2|r - 牵引时间1.5秒|n|cffffcc00等级 3|r - 牵引时间2秒|n|cffffcc00等级 4|r - 牵引时间2.5秒
 Researchhotkey=E
 [A15K]
-Name=瘟疫
-Tip=瘟疫 - [|cffffcc00等级 1|r],瘟疫 - [|cffffcc00等级 2|r],瘟疫 - [|cffffcc00等级 3|r],Last Word  - [|cffffcc00Level 4|r]
-Ubertip=血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高20（25）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高25（30）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,血肉傀儡散发的尸疫气息感染着的周围750范围内的单位，单位被攻击时会额外受到最高30（35）%的伤害，并且降低9%的移动速度。|n|n|cffff8000英雄攻击 魔法伤害|r,Silences opponents for 4 seconds after they finish casting a spell. Has a 700 AOE.
-Researchtip=学习 遗言[|cffffcc00L|r] - [|cffffcc00等级 %d|r]|n(Last Word)
-Researchubertip=Causes any unit under the effect of this aura to become silenced after it finishes casting a spell. Has a 700 AOE. |n|n|cffffcc00Level 1|r - 1 second. |n|cffffcc00Level 2|r - 2 seconds. |n|cffffcc00Level 3|r - 3 seconds. |n|cffffcc00Level 4|r - 4 seconds.
-Researchhotkey=L
+Name=Flesh Golem Slow Aura.
+Tip=Flesh Golem Slow Aura.
+Ubertip=Slows enemy units in a 750 AoE around the Flesh Golem, from a minimum 1% slow at 750 range to a maximum of 20% slow at 150 range.
 [A15L]
-Name=Undying Aura
-Tip=Undying Aura - [|cffffcc00Level 1|r],Undying Aura - [|cffffcc00Level 2|r],Undying Aura - [|cffffcc00Level 3r],Last Word  - [|cffffcc00Level 4|r]
-Ubertip=Gives 200 HP bonus to nearby allied heroes and 75 to allied units.,Gives 275 HP bonus to nearby allied heroes and 100 to allied units.,Gives 350 HP bonus to nearby allied heroes and 125 to allied units.,Silences opponents for 4 seconds after they finish casting a spell. Has a 700 AOE.
-Researchtip=学习 遗言[|cffffcc00L|r] - [|cffffcc00等级 %d|r]|n(Last Word)
-Researchubertip=Causes any unit under the effect of this aura to become silenced after it finishes casting a spell. Has a 700 AOE. |n|n|cffffcc00Level 1|r - 1 second. |n|cffffcc00Level 2|r - 2 seconds. |n|cffffcc00Level 3|r - 3 seconds. |n|cffffcc00Level 4|r - 4 seconds.
-Researchhotkey=L
+Name=Flesh Golem Slow Aura.
+Tip=Flesh Golem Slow Aura.
+Ubertip=Slows enemy units in a 750 AoE around the Flesh Golem, from a minimum 1% slow at 750 range to a maximum of 20% slow at 150 range.
 [A15Y]
 Name=Heart Regen
 [A15Z]
@@ -1440,19 +1434,13 @@ Unubertip=
 Hotkey=B
 Unhotkey=B
 [A177]
-Name=瘟疫
-Tip=,瘟疫 - [|cffffcc00等级 2|r],瘟疫 - [|cffffcc00等级 3|r],Last Word  - [|cffffcc00Level 4|r]
-Ubertip=,,,Silences opponents for 4 seconds after they finish casting a spell. Has a 700 AOE.
-Researchtip=学习 遗言[|cffffcc00L|r] - [|cffffcc00等级 %d|r]|n(Last Word)
-Researchubertip=Causes any unit under the effect of this aura to become silenced after it finishes casting a spell. Has a 700 AOE. |n|n|cffffcc00Level 1|r - 1 second. |n|cffffcc00Level 2|r - 2 seconds. |n|cffffcc00Level 3|r - 3 seconds. |n|cffffcc00Level 4|r - 4 seconds.
-Researchhotkey=L
+Name=Flesh Golem Slow Aura.
+Tip=Flesh Golem Slow Aura.
+Ubertip=Slows enemy units in a 750 AoE around the Flesh Golem, from a minimum 1% slow at 750 range to a maximum of 20% slow at 150 range.
 [A178]
-Name=瘟疫
-Tip=,瘟疫 - [|cffffcc00等级 2|r],瘟疫 - [|cffffcc00等级 3|r],Last Word  - [|cffffcc00Level 4|r]
-Ubertip=,,,Silences opponents for 4 seconds after they finish casting a spell. Has a 700 AOE.
-Researchtip=学习 遗言[|cffffcc00L|r] - [|cffffcc00等级 %d|r]|n(Last Word)
-Researchubertip=Causes any unit under the effect of this aura to become silenced after it finishes casting a spell. Has a 700 AOE. |n|n|cffffcc00Level 1|r - 1 second. |n|cffffcc00Level 2|r - 2 seconds. |n|cffffcc00Level 3|r - 3 seconds. |n|cffffcc00Level 4|r - 4 seconds.
-Researchhotkey=L
+Name=Flesh Golem Slow Aura.
+Tip=Flesh Golem Slow Aura.
+Ubertip=Slows enemy units in a 750 AoE around the Flesh Golem, from a minimum 1% slow at 750 range to a maximum of 20% slow at 150 range.
 [A17T]
 Name=Bloodlust Multi
 Tip=
@@ -1466,12 +1454,9 @@ Researchhotkey=B
 [A182]
 Name=Totem of Water
 [A18A]
-Name=Totem of Wind
-Tip=,Endurance Aura - [|cffffcc00Level 2|r],Endurance Aura - [|cffffcc00Level 3|r]
-Ubertip=,"Increases nearby friendly units' movement speed by <AOae,DataA2,%>% and attack rate by <AOae,DataB2,%>%.","Increases nearby friendly units' movement speed by <AOae,DataA3,%>% and attack rate by <AOae,DataB3,%>%."
-Researchtip=
-Researchubertip=
-Researchhotkey=E
+Name=Flesh Golem Slow Aura.
+Tip=Flesh Golem Slow Aura.
+Ubertip=Slows enemy units in a 750 AoE around the Flesh Golem, from a minimum 1% slow at 750 range to a maximum of 20% slow at 150 range.
 [A18Y]
 Name=Fiery Soul Bonus - 1a
 Tip=
