@@ -2205,9 +2205,8 @@ Bufftip=虚空假面
 Buffubertip=该单位受到了虚空的影响
 EditorName=虚空假面
 [B00U]
-Bufftip=授予力量
-Buffubertip=该单位被授予力量，攻击力被提升了
-EditorName=授予力量
+Bufftip=Empower.
+Buffubertip=This unit has a % damage bonus and cleaving attack in a 240 AoE.
 [B011]
 Bufftip=Weaken Aura
 Buffubertip=This unit's armor has been reduced.

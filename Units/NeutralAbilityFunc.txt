@@ -3430,10 +3430,8 @@ Buttonpos=1,2
 Researchbuttonpos=1,0
 Order=waterelemental
 [A189]
-Art=ReplaceableTextures\PassiveButtons\PASBTNGnollCommandAura.blp
-Buttonpos=0,2
-Targetart=Abilities\Spells\Orc\WarDrums\DrumsCasterHeal.mdl
-Targetattach=origin
+Art=ReplaceableTextures\CommandButtons\BTNEmpower.blp
+Buttonpos=1,1
 [A18D]
 Art=ReplaceableTextures\CommandButtons\BTNUnsummonBuilding.blp
 Specialart=Abilities\Spells\Orc\Purge\PurgeBuffTarget.mdl
@@ -6157,3 +6155,10 @@ Targetattach=hand,right
 Buffart=ReplaceableTextures\CommandButtons\BTNDeathStench.blp
 Targetart=effects\runicbreath.mdx
 Targetattach=origin
+[B0IA]
+Spelldetail=1
+Buffart=ReplaceableTextures\CommandButtons\BTNEmpower.blp
+Targetart=Abilities\Spells\Orc\Bloodlust\BloodlustTarget.mdl
+Targetattachcount=1
+Targetattach=hand,left
+Targetattach1=hand,right

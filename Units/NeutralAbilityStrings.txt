@@ -6182,3 +6182,6 @@ Buffubertip=You're slowed based on your proximity to the Flesh Golem.
 [B0I4]
 Bufftip=Flesh Golem.
 Buffubertip=You're slowed based on your proximity to the Flesh Golem.
+[B0IA]
+Bufftip=Empower.
+Buffubertip=This unit has a % damage bonus and cleaving attack in a 240 AoE.
