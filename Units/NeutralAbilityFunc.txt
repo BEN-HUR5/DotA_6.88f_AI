@@ -3432,6 +3432,10 @@ Order=waterelemental
 [A189]
 Art=ReplaceableTextures\CommandButtons\BTNEmpower.blp
 Buttonpos=1,1
+Targetart=Abilities\Spells\Orc\Bloodlust\BloodlustTarget.mdl
+Targetattachcount=1
+Targetattach=hand,left
+Targetattach1=hand,right
 [A18D]
 Art=ReplaceableTextures\CommandButtons\BTNUnsummonBuilding.blp
 Specialart=Abilities\Spells\Orc\Purge\PurgeBuffTarget.mdl
