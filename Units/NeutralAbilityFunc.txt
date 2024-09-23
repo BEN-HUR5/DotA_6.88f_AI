@@ -5925,7 +5925,7 @@ Buttonpos=1,1
 Order=demolish
 [A2PX]
 Art=ReplaceableTextures\PassiveButtons\PASBTNCriticalStrike.blp
-Buttonpos=1,2
+Buttonpos=1,1
 [B0GO]
 Spelldetail=2
 Buffart=ReplaceableTextures\CommandButtons\BTNSvenGS.BLP

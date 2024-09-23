@@ -5977,9 +5977,9 @@ Name=Leech Seed - MS
 [A2PO]
 Name=Leech Seed - MS
 [A2PX]
-Name=Crit Strike
-Tip=致命一击
-Ubertip=攻击有40%的概率成1.7倍的伤害。
+Name=Critical Strike.
+Tip=Critical Strike.
+Ubertip=All units under Lycan's control have 40% chance to crit for 140% / 160% / 180% damage during Shapeshift.
 [B0GO]
 Bufftip=神之力量
 Buffubertip=该单位在神之力量影响下，攻击力得到大幅提升
