@@ -1042,13 +1042,8 @@ TargetArt=war3mapImported\heroglow.mdx
 Targetattachcount=1
 Targetattach=origin
 [A0PO]
-Art=ReplaceableTextures\CommandButtons\BTNNagaWeaponUp2.blp
-Missileart=
-Missilehoming=1
-Targetart=
-Targetattach=
-Specialart=
-Specialattach=chest
+Art=ReplaceableTextures\PassiveButtons\PASBTNCriticalStrike.blp
+Buttonpos=1,2
 [A0PP]
 Art=ReplaceableTextures\CommandButtons\BTNHelmutPurple.blp
 [A0PQ]

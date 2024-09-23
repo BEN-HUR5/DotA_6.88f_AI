@@ -2556,13 +2556,8 @@ Buttonpos=1,2
 Specialart=
 Order=hex
 [A0PN]
-Art=ReplaceableTextures\CommandButtons\BTNNagaWeaponUp2.blp
-Researchart=ReplaceableTextures\CommandButtons\BTNManaBurn.blp
-Buttonpos=0,2
-Researchbuttonpos=0,0
-Targetart=Abilities\Spells\NightElf\ManaBurn\ManaBurnTarget.mdl
-Order=manaburn
-LightningEffect=MBUR
+Art=ReplaceableTextures\PassiveButtons\PASBTNCriticalStrike.blp
+Buttonpos=1,2
 [A0PV]
 Art=ReplaceableTextures\CommandButtons\BTNAncientOfTheEarth.blp
 [A0Q6]
@@ -6166,3 +6161,7 @@ Targetart=Abilities\Spells\Orc\Bloodlust\BloodlustTarget.mdl
 Targetattachcount=1
 Targetattach=hand,left
 Targetattach1=hand,right
+[B0IB]
+Buffart=ReplaceableTextures\PassiveButtons\PASBTNCriticalStrike.blp
+Targetart=Objects\Spawnmodels\Human\HumanBlood\HumanBloodKnight.mdl
+Targetattach=chest

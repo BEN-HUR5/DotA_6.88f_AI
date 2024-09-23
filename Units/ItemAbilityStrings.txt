@@ -773,7 +773,7 @@ Name=Item Damage Bonus (+30)
 [A0PM]
 Name=Hero Glow
 [A0PO]
-Name=Magebane Trident
+Name=Cripple
 [A0PP]
 Name=Item Hero Stat Bonus +10 agi/int
 [A0PQ]
