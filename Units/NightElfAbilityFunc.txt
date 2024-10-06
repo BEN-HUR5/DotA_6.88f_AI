@@ -614,7 +614,6 @@ Art=ReplaceableTextures\CommandButtons\BTNDireWolf.blp
 Researchart=ReplaceableTextures\CommandButtons\BTNDireWolf.blp
 Buttonpos=3,2
 Researchbuttonpos=3,0
-Order=metamorphosis
 Unart=ReplaceableTextures\CommandButtons\BTNDireWolf.blp
 [A080]
 Art=ReplaceableTextures\CommandButtons\BTNShadowStrike.blp
