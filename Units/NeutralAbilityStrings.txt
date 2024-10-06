@@ -3014,11 +3014,11 @@ Hotkey=E
 [A0ZD]
 Name=Permanent Invisibility Wolves
 [A0ZG]
-Name=Feral Heart Caster lvl 4
-Tip=,命令光环 - [|cffffcc00等级 2|r],命令光环 - [|cffffcc00等级 3|r],命令光环 - [|cffffcc00等级 4|r]
-Ubertip=,增加周围友方单位20%的基础攻击力。|n|n|cff99ccff作用范围：|r900,增加周围友方单位28%的基础攻击力。|n|n|cff99ccff作用范围：|r900,增加周围友方单位36%的基础攻击力。|n|n|cff99ccff作用范围：|r900
-Researchtip=学习 命令光环[|cffffcc00D|r] - [|cffffcc00等级 %d|r]|n(Command Aura)
-Researchubertip=增加周围友方单位的基础攻击力。|n|n|cff99ccff作用范围：|r900|n|n|cffffcc00等级 1|r - 增加12%的基础攻击力|n|cffffcc00等级 2|r - 增加20%的基础攻击力|n|cffffcc00等级 3|r - 增加28%的基础攻击力|n|cffffcc00等级 4|r - 增加36%的基础攻击力
+Name=Feral Heart
+Tip=
+Ubertip=
+Researchtip=
+Researchubertip=
 Researchhotkey=D
 [A0ZH]
 Name=Feral Heart Caster lvl 3
