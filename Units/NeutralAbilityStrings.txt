@@ -1223,6 +1223,16 @@ Name=Frost Nova
 Tip=Frost |cffffcc00N|rova
 Ubertip="Blasts enemy units with a wave of frost that deals <ACfn,DataB1> damage to the target, and <ACfn,DataA1> nova damage. Cold damage slows units' movement and attack rate for <ACfn,Dur1> seconds."
 Hotkey=N
+[A093]
+Name=变狼
+Tip=变狼[|cffffcc00F|r] - [|cffffcc00等级 1|r],变狼[|cffffcc00F|r] - [|cffffcc00等级 2|r],变狼[|cffffcc00F|r] - [|cffffcc00等级 3|r]
+Ubertip=圆月凝固了狼人全身的血液，他变身为狼。狼人将得到100点额外的生命值，基础攻击间隔下降至1.5秒，拥有致命一击的能力。他和他所控制的单位的移动速度将提升至极限（522），并不受减速效果的影响。|n|n|cff99ccff持续时间：|r19|n|cff99ccff冷却时间：|r100,圆月凝固了狼人全身的血液，他变身为狼。狼人将得到200点额外的生命值，基础攻击间隔下降至1.5秒，拥有致命一击的能力。他和他所控制的单位的移动速度将提升至极限（522），并不受减速效果的影响。|n|n|cff99ccff持续时间：|r19|n|cff99ccff冷却时间：|r70,圆月凝固了狼人全身的血液，他变身为狼。狼人将得到300点额外的生命值，基础攻击间隔下降至1.5秒，拥有致命一击的能力。他和他所控制的单位的移动速度将提升至极限（522），并不受减速效果的影响。|n|n|cff99ccff持续时间：|r19|n|cff99ccff冷却时间：|r40
+Hotkey=F
+Researchtip=学习 变狼[|cffffcc00F|r] - [|cffffcc00等级 %d|r]|n(Shapeshift)
+Researchubertip=圆月凝固了狼人全身的血液，他变身为狼。狼人将得到额外的生命值，基础攻击间隔下降至1.5秒，拥有致命一击的能力。他和他所控制的单位的移动速度将提升至极限（522），并不受减速效果的影响。|n|n|cff99ccff持续时间:|r19|n|cff99ccff冷却时间：|r100/70/40|n|cff99ccff魔法消耗：|r100|n|n|cffffcc00等级 1|r - 得到100点额外的生命值|n|cffffcc00等级 2|r - 得到200点额外的生命值|n|cffffcc00等级 3|r - 得到300点额外的生命值
+Researchhotkey=F
+Globalmessage=
+Globalsound=
 [A094]
 Name=地狱烈刃
 Tip=地狱烈刃[|cffffcc00R|r] - [|cffffcc00等级 1|r],地狱烈刃[|cffffcc00R|r] - [|cffffcc00等级 2|r],地狱烈刃[|cffffcc00R|r] - [|cffffcc00等级 3|r],地狱烈刃[|cffffcc00R|r] - [|cffffcc00等级 4|r]

@@ -609,12 +609,6 @@ Art=ReplaceableTextures\PassiveButtons\BTNNaixPoison.blp
 Buttonpos=2,2
 ResearchArt=ReplaceableTextures\CommandButtons\BTNNaixPoison.blp
 Researchbuttonpos=2,0
-[A093]
-Art=ReplaceableTextures\CommandButtons\BTNDireWolf.blp
-Researchart=ReplaceableTextures\CommandButtons\BTNDireWolf.blp
-Buttonpos=3,2
-Researchbuttonpos=3,0
-Unart=ReplaceableTextures\CommandButtons\BTNDireWolf.blp
 [A080]
 Art=ReplaceableTextures\CommandButtons\BTNShadowStrike.blp
 Researchart=ReplaceableTextures\CommandButtons\BTNShadowStrike.blp

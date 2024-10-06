@@ -1224,6 +1224,13 @@ Buttonpos=0,2
 Effectart=Abilities\Spells\Undead\FrostNova\FrostNovaTarget.mdl
 Order=frostnova
 Animnames=spell,slam
+[A093]
+Art=ReplaceableTextures\CommandButtons\BTNDireWolf.blp
+Researchart=ReplaceableTextures\CommandButtons\BTNDireWolf.blp
+Buttonpos=3,2
+Researchbuttonpos=3,0
+Unart=ReplaceableTextures\CommandButtons\BTNDireWolf.blp
+Order=chemicalrage
 [A094]
 Art=ReplaceableTextures\CommandButtons\BTNDoomSwordON
 Unart=ReplaceableTextures\CommandButtons\BTNDoomSwordON
