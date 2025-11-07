@@ -40415,12 +40415,29 @@ function LPR takes nothing returns boolean
      local integer I97=GetHandleId(t)
      local unit m5=LoadUnitHandle(L7,I97,30)
      local unit p5=LoadUnitHandle(L7,I97,2)
-     if GetTriggerEvalCount(t)>8 or XH7(m5) then
-          call DestroyEffect(LoadEffectHandle(L7,I97,31))
-          call FlushChildHashtable(L7,I97)
+     local boolean b = LoadBoolean(L7 , I97 , 'A0QN')
+     local integer i = LoadInteger(L7 , GetHandleId(m5) , 'A0QN')
+     if GetTriggerEventId() == EVENT_UNIT_DEATH then
+          call SaveInteger(L7 , GetHandleId(m5) , 'A0QN' , 0)
+          call DestroyEffect(LoadEffectHandle(L7 , I97 , 31))
+          call FlushChildHashtable(L7 , I97)
           call OZ7(t)
-     else
-          call B67(p5,m5,1,5*GetUnitAbilityLevel(p5,'A0QN'))
+     endif
+     if b then
+          if i > 0 then
+               call B67(p5 , m5 , 1 , 5 * GetUnitAbilityLevel(p5 , 'A0QN') * i)
+          else
+               call FlushChildHashtable(L7 , I97)
+               call OZ7(t)
+          endif
+     endif
+     if GetTriggerEvalCount(t) == 8 then
+          call SaveInteger(L7 , GetHandleId(m5) , 'A0QN' , i - 1)
+          call DestroyEffect(LoadEffectHandle(L7,I97,31))
+          if not(b) then
+               call FlushChildHashtable(L7,I97)
+               call OZ7(t)
+          endif
      endif
      set t=null
      set m5=null
@@ -40438,10 +40455,13 @@ function LQR takes unit ZX7,unit m5 returns nothing
      endif
      set t=CreateTrigger()
      call TriggerRegisterTimerEvent(t,1,true)
+     call TriggerRegisterDeathEvent(t , m5)
      call TriggerAddCondition(t,Condition(function LPR))
      set LTR=GetHandleId(t)
      call SaveUnitHandle(L7,LTR,2,ZX7)
      call SaveUnitHandle(L7,LTR,30,m5)
+     call SaveBoolean(L7 , LTR , 'A0QN' , LoadInteger(L7 , GetHandleId(m5) , 'A0QN') == 0)
+     call SaveInteger(L7 , GetHandleId(m5) , 'A0QN' , LoadInteger(L7 , GetHandleId(m5) , 'A0QN') + 1)
      call B67(ZX7 , ZX7 , 1 , YJ7(15 , GetWidgetLife(ZX7) - 1))
      call SaveEffectHandle(L7,LTR,31,AddSpecialEffectTarget("Abilities\\Spells\\Other\\BreathOfFire\\BreathOfFireDamage.mdl",m5,"chest"))
      set t=null
