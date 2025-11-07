@@ -40417,8 +40417,8 @@ function LPR takes nothing returns boolean
      local unit p5=LoadUnitHandle(L7,I97,2)
      local boolean b = LoadBoolean(L7 , I97 , 'A0QN')
      local integer i = LoadInteger(L7 , GetHandleId(m5) , 'A0QN')
-     if GetTriggerEventId() == EVENT_UNIT_DEATH then
-          call SaveInteger(L7 , GetHandleId(m5) , 'A0QN' , 0)
+     if GetTriggerEventId() == EVENT_UNIT_DEATH or XH7(m5) then
+          call FlushChildHashtable(L7 , GetHandleId(m5))
           call DestroyEffect(LoadEffectHandle(L7 , I97 , 31))
           call FlushChildHashtable(L7 , I97)
           call OZ7(t)
@@ -40427,6 +40427,7 @@ function LPR takes nothing returns boolean
           if i > 0 then
                call B67(p5 , m5 , 1 , 5 * GetUnitAbilityLevel(p5 , 'A0QN') * i)
           else
+               call FlushChildHashtable(L7 , GetHandleId(m5))
                call FlushChildHashtable(L7 , I97)
                call OZ7(t)
           endif
