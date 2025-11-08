@@ -40423,14 +40423,8 @@ function LPR takes nothing returns boolean
           call FlushChildHashtable(L7 , I97)
           call OZ7(t)
      endif
-     if b then
-          if i > 0 then
-               call B67(p5 , m5 , 1 , 5 * GetUnitAbilityLevel(p5 , 'A0QN') * i)
-          else
-               call FlushChildHashtable(L7 , GetHandleId(m5))
-               call FlushChildHashtable(L7 , I97)
-               call OZ7(t)
-          endif
+     if b and i > 0 then
+          call B67(p5 , m5 , 1 , 5 * GetUnitAbilityLevel(p5 , 'A0QN') * i)
      endif
      if GetTriggerEvalCount(t) == 8 then
           call SaveInteger(L7 , GetHandleId(m5) , 'A0QN' , i - 1)
@@ -40439,6 +40433,11 @@ function LPR takes nothing returns boolean
                call FlushChildHashtable(L7,I97)
                call OZ7(t)
           endif
+     endif
+     if b and i == 0 then
+          call FlushChildHashtable(L7 , GetHandleId(m5))
+          call FlushChildHashtable(L7 , I97)
+          call OZ7(t)
      endif
      set t=null
      set m5=null
