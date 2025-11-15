@@ -37432,7 +37432,7 @@ function U39 takes nothing returns boolean
           call NM7(OB7)
           call OZ7(t)
      endif
-     call UnitRemoveAbility(p5 , 'A07A')
+     call UnitRemoveAbility(p5 , 'A1IR')
      set t=null
      set p5=null
      set m5=null
@@ -37450,6 +37450,8 @@ function U69 takes nothing returns boolean
           set m5=GetTriggerUnit()
           set p5=GetAttacker()
           set OB7=GetHandleId(t)
+          call XF7(p5 , 'A1IR')
+          call SetUnitAbilityLevel(p5 , 'A1IR' , GetUnitAbilityLevel(p5 , 'A07A'))
           call TriggerRegisterUnitEvent(t,m5,EVENT_UNIT_DAMAGED)
           call TriggerRegisterTimerEvent(t,2.95,false)
           call TriggerAddCondition(t,Condition(function U39))
@@ -37547,8 +37549,6 @@ function U19 takes nothing returns nothing
      local integer OB7=GetHandleId(t)
      local unit p5=O77(OB7,"Hero")
      if IsTriggerEnabled(OE7(OB7,"CancelTr"))then
-          call XF7(p5 , 'A1IR')
-          call SetUnitAbilityLevel(p5 , 'A1IR' , GetUnitAbilityLevel(p5 , 'A07A'))
           call OV7(p5,"WindWalkBH|Active")
      endif
      call NM7(OB7)
@@ -37562,7 +37562,7 @@ function U09 takes nothing returns nothing
      local integer OB7=GetHandleId(t)
      local unit p5=GetTriggerUnit()
      local integer V77=GetUnitAbilityLevel(p5,'A07A')
-     call TriggerRegisterTimerEvent(t,1.25-0.25*V77-.01,false)
+     call TriggerRegisterTimerEvent(t,1.25-0.25*V77,false)
      call TriggerAddAction(t,function U19)
      call NT7(OB7,"Hero",p5)
      set t=CreateTrigger()
