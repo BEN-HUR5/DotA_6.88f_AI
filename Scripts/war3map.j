@@ -45390,7 +45390,7 @@ function E5D takes integer r returns nothing
      call NP7(OB7,"Iterations",r)
      call NP7(OB7,"Level",V77)
      call NP7(OB7,"Spell",E0D)
-     call TriggerRegisterTimerEvent(t,.3,true)
+     call TriggerRegisterTimerEvent(t , 0.5 , true)
      call TriggerAddCondition(t,Condition(function ELD))
      set t=null
      set m5=null
