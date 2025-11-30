@@ -45186,77 +45186,36 @@ function FZ8 takes nothing returns nothing
 endfunction
 
 function EUD takes unit EVD returns integer
-     local real r=GetRandomReal(0,100)
-     local integer V77=GetUnitAbilityLevel(EVD,'A088')
-     local boolean EWD=MV7(EVD,ZU[FB4])!=null
-     local integer EXD=0
-     local integer id=GetPlayerId(GetOwningPlayer(EVD))
-     set EWD=false
-     if V77==1 then
-          set TI4[id]=TI4[id]+1
-          if EWD then
-               if r<30 then
-                    set TG4[id]=TG4[id]+1
-                    set EXD=3
-               elseif r<60 then
-                    set TF4[id]=TF4[id]+1
-                    set EXD=2
-               endif
-          else
-               if r<25 then
-                    set EXD=2
-                    set TF4[id]=TF4[id]+1
-               endif
+     local real r = GetRandomInt(0 , 39)
+     local integer V77 = GetUnitAbilityLevel(EVD,'A088')
+     local integer EXD = 0
+     local integer id = GetPlayerId(GetOwningPlayer(EVD))
+     if V77 == 1 then
+          set TI4[id] = TI4[id]+1
+          if r < 16 then
+               set EXD = 2
+               set TF4[id] = TF4[id]+1
           endif
-     elseif V77==2 then
-          set TI4[id]=TI4[id]+1
-          if EWD then
-               if r<17.5 then
-                    set EXD=4
-                    set TH4[id]=TH4[id]+1
-               elseif r<35 then
-                    set EXD=3
-                    set TG4[id]=TG4[id]+1
-               elseif r<70 then
-                    set EXD=2
-                    set TF4[id]=TF4[id]+1
-               endif
-          else
-               if r<20 then
-                    set EXD=3
-                    set TG4[id]=TG4[id]+1
-               elseif r<40 then
-                    set EXD=2
-                    set TF4[id]=TF4[id]+1
-               endif
+     elseif V77 == 2 then
+          set TI4[id] = TI4[id]+1
+          if r < 8 then
+               set EXD = 3
+               set TG4[id] = TG4[id]+1
+          elseif r < 20 then
+               set EXD = 2
+               set TF4[id] = TF4[id]+1
           endif
-     elseif V77==3 then
-          set TI4[id]=TI4[id]+1
-          if EWD then
-               if r<$A then
-                    set EXD=5
-                    set N4[id]=N4[id]+1
-               elseif r<20 then
-                    set EXD=4
-                    set TH4[id]=TH4[id]+1
-               elseif r<40 then
-                    set EXD=3
-                    set TG4[id]=TG4[id]+1
-               elseif r<80 then
-                    set EXD=2
-                    set TF4[id]=TF4[id]+1
-               endif
-          else
-               if r<12.5 then
-                    set EXD=4
-                    set TH4[id]=TH4[id]+1
-               elseif r<25 then
-                    set EXD=3
-                    set TG4[id]=TG4[id]+1
-               elseif r<50 then
-                    set EXD=2
-                    set TF4[id]=TF4[id]+1
-               endif
+     elseif V77 == 3 then
+          set TI4[id] = TI4[id]+1
+          if r < 5 then
+               set EXD = 4
+               set TH4[id] = TH4[id]+1
+          elseif r < 10 then
+               set EXD = 3
+               set TG4[id] = TG4[id]+1
+          elseif r < 24 then
+               set EXD = 2
+               set TF4[id] = TF4[id]+1
           endif
      endif
      return EXD
@@ -45359,6 +45318,7 @@ function ECD takes nothing returns nothing
      local unit ZX7=GetTriggerUnit()
      local unit IH7=GetSpellTargetUnit()
      local unit BB7=CreateUnit(GetOwningPlayer(ZX7),'e00E',GetUnitX(IH7),GetUnitY(IH7),0)
+     call SetUnitState(ZX7 , UNIT_STATE_MANA , 0.6 * GetUnitState(ZX7 , UNIT_STATE_MANA))
      call XF7(BB7,'A2KR')
      call IssueTargetOrderById(BB7,$D007F,IH7)
      set ZX7=null
