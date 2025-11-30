@@ -45186,7 +45186,7 @@ function FZ8 takes nothing returns nothing
 endfunction
 
 function EUD takes unit EVD returns integer
-     local real r = GetRandomInt(0 , 39)
+     local integer r = GetRandomInt(0 , 39)
      local integer V77 = GetUnitAbilityLevel(EVD,'A088')
      local integer EXD = 0
      local integer id = GetPlayerId(GetOwningPlayer(EVD))
