@@ -45354,11 +45354,11 @@ function ELD takes nothing returns boolean
      local unit BB7
      if GetTriggerEvalCount(t)<E1D then
           if GetTriggerEvalCount(t) == 1 then
-               call YW7("|c00FFFF002x Multicast|r",5,m5,.03,255,0,0,255)
+               call YW7("|c00ffff002x Multicast|r",0.5,m5,.03,255,0,0,255)
           elseif GetTriggerEvalCount(t) == 2 then
-               call YW7("|cffff80003x Multicast|r",5,m5,.03,255,0,0,255)
+               call YW7("|c00ff7f003x|r Multicast",0.5,m5,.03,255,0,0,255)
           elseif GetTriggerEvalCount(t) == 3 then
-               call YW7("4x Multicast",5,m5,.03,255,0,0,255)
+               call YW7("|c00ff00004x|r Multicast",0.5,m5,.03,255,0,0,255)
           endif
           set BB7=CreateUnit(GetOwningPlayer(p5),'e00E',GetUnitX(m5),GetUnitY(m5),0)
           if E0D=='A2KQ' then
@@ -111550,6 +111550,8 @@ function R7d takes nothing returns nothing
      call SaveBoolean(ZCC,-'A08A',0,true)
      call SaveReal(ZCC,-'A08D',1,6)
      call SaveBoolean(ZCC,-'A08D',0,true)
+     call SaveBoolean(ZCC,-'A2KQ',0,true)
+     call SaveReal(ZCC,-'A2KQ',1,6)
      call SaveReal(ZCC,-'A08F',1,15)
      call SaveBoolean(ZCC,-'A08F',0,true)
      call SaveReal(ZCC,-'A08G',1,10)
