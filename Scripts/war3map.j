@@ -45342,7 +45342,7 @@ function E6D takes nothing returns nothing
 endfunction
 
 function IgniteSecondaryTargets takes nothing returns boolean
-     return k3() and (not (IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE)))
+     return (IsUnitEnemy(GetFilterUnit() , GetOwningPlayer(IN4))) and (not IsUnitType(GetFilterUnit() , UNIT_TYPE_STRUCTURE)) and (GetWidgetLife(GetFilterUnit()) > 0.405) and (R9d(GetFilterUnit() , GetOwningPlayer(IN4))) and (Q97(GetFilterUnit())) and (not (IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE)))
 endfunction
 
 function IgnitePrimaryTargets takes nothing returns boolean
@@ -45386,10 +45386,15 @@ function ELD takes nothing returns boolean
                endif
           else
                set LQ7 = WS7()
+               set IN4 = p5
                call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , Condition(function IgnitePrimaryTargets))
+               set IN4 = null
                set m5 = GroupPickRandomUnit(LQ7)
                if m5 == null then
+                    set LQ7 = WS7()
+                    set IN4 = p5
                     call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , Condition(function IgniteSecondaryTargets))
+                    set IN4 = null
                     set m5 = GroupPickRandomUnit(LQ7)
                endif
                if m5 != null then
