@@ -45264,13 +45264,11 @@ function EZD takes integer r returns nothing
      local integer EAD=GetSpellAbilityId()
      local integer T8=1
      if r==2 then
-          call YW7("|c00FFFF002x 多重施法！！|r",5,GetTriggerUnit(),.03,$FF,0,0,$FF)
+          call YW7("2x Multicast",1.5,WI7,.03,255,255,0,255)
      elseif r==3 then
-          call YW7("|cffff80003x 多重施法！！！|r",5,GetTriggerUnit(),.03,$FF,0,0,$FF)
+          call YW7("|c00ff7f003x|r Multicast",1.5,WI7,.03,255,255,0,255)
      elseif r==4 then
-          call YW7("4x 多重施法！！！！",5,GetTriggerUnit(),.03,$FF,0,0,$FF)
-     elseif r==5 then
-          call YW7("5x 多重施法！！！！！",5,GetTriggerUnit(),.03,$FF,0,0,$FF)
+          call YW7("|c00ff00004x|r Multicast",1.5,WI7,.03,255,255,0,255)
      endif
      set r=r-1
      call GroupEnumUnitsInRange(LQ7,GetUnitX(WI7),GetUnitY(WI7),600,Condition(function EYD))
@@ -45354,11 +45352,19 @@ function ELD takes nothing returns boolean
      local unit BB7
      if GetTriggerEvalCount(t)<E1D then
           if GetTriggerEvalCount(t) == 1 then
-               call YW7("|c00ffff002x Multicast|r",0.5,m5,.03,255,0,0,255)
+               if E1D == 2 then
+                    call YW7("2x Multicast",1.5,m5,.03,255,255,0,255)
+               else
+                    call YW7("2x Multicast",0.5,m5,.03,255,255,0,255)
+               endif
           elseif GetTriggerEvalCount(t) == 2 then
-               call YW7("|c00ff7f003x|r Multicast",0.5,m5,.03,255,0,0,255)
+               if E1D == 3 then
+                    call YW7("|c00ff7f003x|r Multicast",1.5,m5,.03,255,255,0,255)
+               else
+                    call YW7("|c00ff7f003x|r Multicast",0.5,m5,.03,255,255,0,255)
+               endif
           elseif GetTriggerEvalCount(t) == 3 then
-               call YW7("|c00ff00004x|r Multicast",0.5,m5,.03,255,0,0,255)
+               call YW7("|c00ff00004x|r Multicast",1.5,m5,.03,255,255,0,255)
           endif
           set BB7=CreateUnit(GetOwningPlayer(p5),'e00E',GetUnitX(m5),GetUnitY(m5),0)
           if E0D=='A2KQ' then
