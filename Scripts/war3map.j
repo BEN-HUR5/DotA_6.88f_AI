@@ -45378,10 +45378,10 @@ function ELD takes nothing returns boolean
                endif
           else
                set LQ7 = WS7()
-               call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , (Condition(function k3) and not IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE) and GetUnitAbilityLevel(GetFilterUnit() , 'B03J') == 0))
+               call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , (Condition(function k3) and (not IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE)) and (GetUnitAbilityLevel(GetFilterUnit() , 'B03J') == 0)))
                set m5 = GroupPickRandomUnit(LQ7)
                if m5 == null then
-                    call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , (Condition(function k3) and not IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE)))
+                    call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , (Condition(function k3) and (not IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE))))
                     set m5 = GroupPickRandomUnit(LQ7)
                endif
                if m5 != null then
