@@ -45341,6 +45341,14 @@ function E6D takes nothing returns nothing
      set ZX7=null
 endfunction
 
+function IgniteSecondaryTargets takes nothing returns boolean
+     return k3() and (not (IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE)))
+endfunction
+
+function IgnitePrimaryTargets takes nothing returns boolean
+     return IgniteSecondaryTargets() and (GetUnitAbilityLevel(GetFilterUnit() , 'B03J') == 0)
+endfunction
+
 function ELD takes nothing returns boolean
      local trigger t=GetTriggeringTrigger()
      local integer OB7=GetHandleId(t)
@@ -45378,10 +45386,10 @@ function ELD takes nothing returns boolean
                endif
           else
                set LQ7 = WS7()
-               call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , (Condition(function k3) and (not IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE)) and (GetUnitAbilityLevel(GetFilterUnit() , 'B03J') == 0)))
+               call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , Condition(function IgnitePrimaryTargets))
                set m5 = GroupPickRandomUnit(LQ7)
                if m5 == null then
-                    call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , (Condition(function k3) and (not IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE))))
+                    call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , Condition(function IgniteSecondaryTargets))
                     set m5 = GroupPickRandomUnit(LQ7)
                endif
                if m5 != null then
