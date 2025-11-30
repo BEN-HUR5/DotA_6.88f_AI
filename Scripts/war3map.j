@@ -45191,31 +45191,31 @@ function EUD takes unit EVD returns integer
      local integer EXD = 0
      local integer id = GetPlayerId(GetOwningPlayer(EVD))
      if V77 == 1 then
-          set TI4[id] = TI4[id]+1
+          set TI4[id] = TI4[id] + 1
           if r < 16 then
                set EXD = 2
-               set TF4[id] = TF4[id]+1
+               set TF4[id] = TF4[id] + 1
           endif
      elseif V77 == 2 then
-          set TI4[id] = TI4[id]+1
+          set TI4[id] = TI4[id] + 1
           if r < 8 then
                set EXD = 3
-               set TG4[id] = TG4[id]+1
+               set TG4[id] = TG4[id] + 1
           elseif r < 20 then
                set EXD = 2
-               set TF4[id] = TF4[id]+1
+               set TF4[id] = TF4[id] + 1
           endif
      elseif V77 == 3 then
-          set TI4[id] = TI4[id]+1
+          set TI4[id] = TI4[id] + 1
           if r < 5 then
                set EXD = 4
-               set TH4[id] = TH4[id]+1
+               set TH4[id] = TH4[id] + 1
           elseif r < 10 then
                set EXD = 3
-               set TG4[id] = TG4[id]+1
+               set TG4[id] = TG4[id] + 1
           elseif r < 24 then
                set EXD = 2
-               set TF4[id] = TF4[id]+1
+               set TF4[id] = TF4[id] + 1
           endif
      endif
      return EXD
@@ -45318,7 +45318,7 @@ function ECD takes nothing returns nothing
      local unit ZX7=GetTriggerUnit()
      local unit IH7=GetSpellTargetUnit()
      local unit BB7=CreateUnit(GetOwningPlayer(ZX7),'e00E',GetUnitX(IH7),GetUnitY(IH7),0)
-     call SetUnitState(ZX7 , UNIT_STATE_MANA , 0.6 * GetUnitState(ZX7 , UNIT_STATE_MANA))
+     call SetUnitState(ZX7 , UNIT_STATE_MANA , 0.4 * GetUnitState(ZX7 , UNIT_STATE_MANA))
      call XF7(BB7,'A2KR')
      call IssueTargetOrderById(BB7,$D007F,IH7)
      set ZX7=null
