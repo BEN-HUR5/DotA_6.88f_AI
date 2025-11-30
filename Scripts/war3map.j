@@ -45351,8 +45351,8 @@ function ELD takes nothing returns boolean
      local integer E0D=OM7(OB7,"Spell")
      local unit BB7
      local group LQ7
-     if GetTriggerEvalCount(t)<E1D then
-          if (GetSpellAbilityId() != 'A007' and GetSpellAbilityId() != 'A01T' and GetSpellAbilityId() != 'A00F') then
+     if GetTriggerEvalCount(t) < E1D then
+          if (E0D != 'A007' and E0D != 'A01T' and E0D != 'A00F') then
                if E0D=='A2KQ' then
                     set E0D='A2KR'
                endif
@@ -45361,12 +45361,27 @@ function ELD takes nothing returns boolean
                call XF7(BB7,E0D)
                call SetUnitAbilityLevel(BB7,E0D,V77)
                call IssueTargetOrderById(BB7,$D007F,m5)
+               if GetTriggerEvalCount(t) == 1 then
+                    if E1D == 2 then
+                         call YW7("2x Multicast",1.5,m5,.03,255,255,0,255)
+                    else
+                         call YW7("2x Multicast",0.5,m5,.03,255,255,0,255)
+                    endif
+               elseif GetTriggerEvalCount(t) == 2 then
+                    if E1D == 3 then
+                         call YW7("3x Multicast",1.5,m5,.03,255,127,0,255)
+                    else
+                         call YW7("3x Multicast",0.5,m5,.03,255,127,0,255)
+                    endif
+               elseif GetTriggerEvalCount(t) == 3 then
+                    call YW7("4x Multicast",1.5,m5,.03,255,0,0,255)
+               endif
           else
                set LQ7 = WS7()
-               call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , (Condition(function k3) and not IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE) and GetUnitAbilityLevel(GetFilterUnit() , 'B03J') == 0)))
+               call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , (Condition(function k3) and not IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE) and GetUnitAbilityLevel(GetFilterUnit() , 'B03J') == 0))
                set m5 = GroupPickRandomUnit(LQ7)
                if m5 == null then
-                    call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , (Condition(function k3) and not IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE))))
+                    call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , (Condition(function k3) and not IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE)))
                     set m5 = GroupPickRandomUnit(LQ7)
                endif
                if m5 != null then
@@ -45396,6 +45411,8 @@ function ELD takes nothing returns boolean
           call NM7(OB7)
           call OZ7(t)
      endif
+     call WR7(LQ7)
+     set LQ7 = null
      set t=null
      set m5=null
      set p5=null
