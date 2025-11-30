@@ -45203,7 +45203,7 @@ function EUD takes unit EVD returns integer
           if r < 2 then
                set EXD = 3
                set TG4[id] = TG4[id] + 1
-          elseif r < 5 then
+          elseif r < 7 then
                set EXD = 2
                set TF4[id] = TF4[id] + 1
           endif
@@ -45213,10 +45213,10 @@ function EUD takes unit EVD returns integer
           if r < 5 then
                set EXD = 4
                set TH4[id] = TH4[id] + 1
-          elseif r < 10 then
+          elseif r < 15 then
                set EXD = 3
                set TG4[id] = TG4[id] + 1
-          elseif r < 24 then
+          elseif r < 39 then
                set EXD = 2
                set TF4[id] = TF4[id] + 1
           endif
@@ -45266,9 +45266,9 @@ function EZD takes integer r returns nothing
      if r==2 then
           call YW7("2x Multicast",1.5,WI7,.03,255,255,0,255)
      elseif r==3 then
-          call YW7("|c00ff7f003x|r Multicast",1.5,WI7,.03,255,255,0,255)
+          call YW7("3x Multicast",1.5,WI7,.03,255,127,0,255)
      elseif r==4 then
-          call YW7("|c00ff00004x|r Multicast",1.5,WI7,.03,255,255,0,255)
+          call YW7("4x Multicast",1.5,WI7,.03,255,0,0,255)
      endif
      set r=r-1
      call GroupEnumUnitsInRange(LQ7,GetUnitX(WI7),GetUnitY(WI7),600,Condition(function EYD))
@@ -45350,29 +45350,48 @@ function ELD takes nothing returns boolean
      local integer V77=OM7(OB7,"Level")
      local integer E0D=OM7(OB7,"Spell")
      local unit BB7
+     local group LQ7
      if GetTriggerEvalCount(t)<E1D then
-          if GetTriggerEvalCount(t) == 1 then
-               if E1D == 2 then
-                    call YW7("2x Multicast",1.5,m5,.03,255,255,0,255)
-               else
-                    call YW7("2x Multicast",0.5,m5,.03,255,255,0,255)
+          if (GetSpellAbilityId() != 'A007' and GetSpellAbilityId() != 'A01T' and GetSpellAbilityId() != 'A00F') then
+               if E0D=='A2KQ' then
+                    set E0D='A2KR'
                endif
-          elseif GetTriggerEvalCount(t) == 2 then
-               if E1D == 3 then
-                    call YW7("|c00ff7f003x|r Multicast",1.5,m5,.03,255,255,0,255)
-               else
-                    call YW7("|c00ff7f003x|r Multicast",0.5,m5,.03,255,255,0,255)
+               set BB7=CreateUnit(GetOwningPlayer(p5),'e00E',GetUnitX(m5),GetUnitY(m5),0)
+               call UnitApplyTimedLife(BB7,'BTLF',0.5)
+               call XF7(BB7,E0D)
+               call SetUnitAbilityLevel(BB7,E0D,V77)
+               call IssueTargetOrderById(BB7,$D007F,m5)
+          else
+               set LQ7 = WS7()
+               call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , (Condition(function k3) and not IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE) and GetUnitAbilityLevel(GetFilterUnit() , 'B03J') == 0)))
+               set m5 = GroupPickRandomUnit(LQ7)
+               if m5 == null then
+                    call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , (Condition(function k3) and not IsUnitType(GetFilterUnit() , UNIT_TYPE_MAGIC_IMMUNE))))
+                    set m5 = GroupPickRandomUnit(LQ7)
                endif
-          elseif GetTriggerEvalCount(t) == 3 then
-               call YW7("|c00ff00004x|r Multicast",1.5,m5,.03,255,255,0,255)
+               if m5 != null then
+                    set BB7=CreateUnit(GetOwningPlayer(p5),'e00E',GetUnitX(p5),GetUnitY(p5),0)
+                    call UnitApplyTimedLife(BB7,'BTLF',0.5)
+                    call XF7(BB7,E0D)
+                    call SetUnitAbilityLevel(BB7,E0D,V77)
+                    call IssueTargetOrderById(BB7,852662,m5)
+               endif
+               if GetTriggerEvalCount(t) == 1 then
+                    if E1D == 2 then
+                         call YW7("2x Multicast",1.5,p5,.03,255,255,0,255)
+                    else
+                         call YW7("2x Multicast",0.5,p5,.03,255,255,0,255)
+                    endif
+               elseif GetTriggerEvalCount(t) == 2 then
+                    if E1D == 3 then
+                         call YW7("3x Multicast",1.5,p5,.03,255,127,0,255)
+                    else
+                         call YW7("3x Multicast",0.5,p5,.03,255,127,0,255)
+                    endif
+               elseif GetTriggerEvalCount(t) == 3 then
+                    call YW7("4x Multicast",1.5,p5,.03,255,0,0,255)
+               endif
           endif
-          set BB7=CreateUnit(GetOwningPlayer(p5),'e00E',GetUnitX(m5),GetUnitY(m5),0)
-          if E0D=='A2KQ' then
-               set E0D='A2KR'
-          endif
-          call XF7(BB7,E0D)
-          call SetUnitAbilityLevel(BB7,E0D,V77)
-          call IssueTargetOrderById(BB7,$D007F,m5)
      else
           call NM7(OB7)
           call OZ7(t)
@@ -45405,13 +45424,13 @@ endfunction
 
 function E2D takes nothing returns boolean
      local integer r
-     if GetUnitAbilityLevel(GetTriggerUnit(),'A088')>0 and WQ7(GetSpellTargetUnit())==false and(GetSpellAbilityId()=='A04W' or GetSpellAbilityId()=='A08D' or GetSpellAbilityId()=='A08A' or GetSpellAbilityId()=='A089' or GetSpellAbilityId()=='A2KQ')then
-          set r=EUD(GetTriggerUnit())
-          if r>1 and((LoadInteger(L7,(GetHandleId((GetSpellTargetUnit()))),((4322))))==1)==false then
+     if GetUnitAbilityLevel(GetTriggerUnit() , 'A088') > 0 and WQ7(GetSpellTargetUnit()) == false and (GetSpellAbilityId() == 'A08D' or GetSpellAbilityId() == 'A08A' or GetSpellAbilityId() == 'A089' or GetSpellAbilityId() == 'A2KQ' or GetSpellAbilityId() == 'A007' or GetSpellAbilityId() == 'A01T' or GetSpellAbilityId() == 'A00F') then
+          set r = EUD(GetTriggerUnit())
+          if r > 1 and LoadInteger(L7 , GetHandleId(GetSpellTargetUnit()) , 4322) != 1 then
                call E5D(r)
           endif
      endif
-     if WQ7(GetSpellTargetUnit())==false and GetSpellAbilityId()=='A2KQ' then
+     if WQ7(GetSpellTargetUnit()) == false and GetSpellAbilityId() == 'A2KQ' then
           call ECD()
      endif
      return false
