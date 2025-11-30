@@ -45186,26 +45186,29 @@ function FZ8 takes nothing returns nothing
 endfunction
 
 function EUD takes unit EVD returns integer
-     local integer r = GetRandomInt(0 , 39)
+     local integer r = 0
      local integer V77 = GetUnitAbilityLevel(EVD,'A088')
      local integer EXD = 0
      local integer id = GetPlayerId(GetOwningPlayer(EVD))
      if V77 == 1 then
+          set r = GetRandomInt(0 , 4)
           set TI4[id] = TI4[id] + 1
-          if r < 16 then
+          if r < 2 then
                set EXD = 2
                set TF4[id] = TF4[id] + 1
           endif
      elseif V77 == 2 then
+          set r = GetRandomInt(0 , 9)
           set TI4[id] = TI4[id] + 1
-          if r < 8 then
+          if r < 2 then
                set EXD = 3
                set TG4[id] = TG4[id] + 1
-          elseif r < 20 then
+          elseif r < 5 then
                set EXD = 2
                set TF4[id] = TF4[id] + 1
           endif
      elseif V77 == 3 then
+          set r = GetRandomInt(0 , 39)
           set TI4[id] = TI4[id] + 1
           if r < 5 then
                set EXD = 4
@@ -45349,10 +45352,14 @@ function ELD takes nothing returns boolean
      local integer V77=OM7(OB7,"Level")
      local integer E0D=OM7(OB7,"Spell")
      local unit BB7
-     if GetTriggerEvalCount(t)>E1D then
-          call NM7(OB7)
-          call OZ7(t)
-     else
+     if GetTriggerEvalCount(t)<E1D then
+          if GetTriggerEvalCount(t) == 1 then
+               call YW7("|c00FFFF002x Multicast|r",5,m5,.03,255,0,0,255)
+          elseif GetTriggerEvalCount(t) == 2 then
+               call YW7("|cffff80003x Multicast|r",5,m5,.03,255,0,0,255)
+          elseif GetTriggerEvalCount(t) == 3 then
+               call YW7("4x Multicast",5,m5,.03,255,0,0,255)
+          endif
           set BB7=CreateUnit(GetOwningPlayer(p5),'e00E',GetUnitX(m5),GetUnitY(m5),0)
           if E0D=='A2KQ' then
                set E0D='A2KR'
@@ -45360,6 +45367,9 @@ function ELD takes nothing returns boolean
           call XF7(BB7,E0D)
           call SetUnitAbilityLevel(BB7,E0D,V77)
           call IssueTargetOrderById(BB7,$D007F,m5)
+     else
+          call NM7(OB7)
+          call OZ7(t)
      endif
      set t=null
      set m5=null
@@ -45375,16 +45385,6 @@ function E5D takes integer r returns nothing
      local integer V77=GetUnitAbilityLevel(p5,E0D)
      local trigger t=CreateTrigger()
      local integer OB7=GetHandleId(t)
-     if r==2 then
-          call YW7("|c00FFFF002x 多重施法！！|r",5,GetTriggerUnit(),.03,$FF,0,0,$FF)
-     elseif r==3 then
-          call YW7("|cffff80003x 多重施法！！！|r",5,GetTriggerUnit(),.03,$FF,0,0,$FF)
-     elseif r==4 then
-          call YW7("4x 多重施法！！！！",5,GetTriggerUnit(),.03,$FF,0,0,$FF)
-     elseif r==5 then
-          call YW7("5x 多重施法！！！！！",5,GetTriggerUnit(),.03,$FF,0,0,$FF)
-     endif
-     set r=r-1
      call NT7(OB7,"Target",m5)
      call NT7(OB7,"Source",p5)
      call NP7(OB7,"Iterations",r)
@@ -72519,12 +72519,12 @@ function W6E takes integer WLE,integer W1E,integer W0E,integer W5E,integer W2E,i
      call SaveInteger(C_4,WLE,7,X8E)
      call SaveInteger(C_4,WLE,8,X9E)
      call SaveInteger(C_4,WLE,9,XDE)
-     call SaveInteger(C_4,WLE,$A,XEE)
-     call SaveInteger(C_4,WLE,$B,XFE)
-     call SaveInteger(C_4,WLE,$C,XGE)
-     call SaveInteger(C_4,WLE,$D,XHE)
-     call SaveInteger(C_4,WLE,$E,XIE)
-     call SaveInteger(C_4,WLE,$F,XJE)
+     call SaveInteger(C_4,WLE,10,XEE)
+     call SaveInteger(C_4,WLE,11,XFE)
+     call SaveInteger(C_4,WLE,12,XGE)
+     call SaveInteger(C_4,WLE,13,XHE)
+     call SaveInteger(C_4,WLE,14,XIE)
+     call SaveInteger(C_4,WLE,15,XJE)
      if(bj_forLoopBIndex<=2)then
           set eY[336+16*bj_forLoopBIndex+bj_forLoopAIndex]=WLE
      endif
@@ -72636,20 +72636,20 @@ function XNE takes integer XOE returns nothing
           call W6E('A2UE',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
           call W6E('A0LC',50,40,30,0,0,0,0,0,0,0,0,0,0,0,0,0)
      elseif XOE=='Hmkg' then
-          call W6E('A04W',$C,$C,$C,$C,75,85,95,105,600,600,600,600,0,0,0,0)
-          call W6E('A011',$F,$F,$F,$F,95,105,115,125,700,700,700,700,0,0,0,0)
-          call W6E('A083',20,20,20,20,75,75,75,75,600,600,600,600,0,0,0,0)
+          call W6E('A04W',12,12,12,12,75,85,95,105,475,475,475,475,0,0,0,0)
+          call W6E('A011',15,15,15,15,90,90,90,90,700,700,700,700,0,0,0,0)
+          call W6E('A083',20,20,20,20,50,50,50,50,600,600,600,600,0,0,0,0)
           call W6E('A088',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
-          call W6E('A2KQ',20,$F,$F,0,400,$8C,$9B,0,600,$4B0,$4B0,500,0,0,0,0)
-          call W6E('A08D',6,6,6,6,$B9,$C3,$CD,$D7,600,600,600,600,0,0,0,0)
-          call W6E('A08A',8,8,8,8,$91,$9B,$A5,$AF,600,600,600,600,0,0,0,0)
-          call W6E('A089',$A,$A,$A,$A,105,115,125,$87,600,600,600,600,0,0,0,0)
-          call W6E('A00F',$F,$F,$F,$F,95,105,115,125,700,700,700,700,450,450,450,450)
-          call W6E('A01T',$F,$F,$F,$F,95,105,115,125,700,700,700,700,300,300,300,300)
-          call W6E('A007',$F,$F,$F,$F,95,105,115,125,700,700,700,700,$96,$96,$96,$96)
-          call W6E('A08I',5,5,5,5,75,75,75,75,600,600,600,600,0,0,0,0)
-          call W6E('A08G',$A,$A,$A,$A,75,75,75,75,600,600,600,600,0,0,0,0)
-          call W6E('A08F',$F,$F,$F,$F,75,75,75,75,600,600,600,600,0,0,0,0)
+          call W6E('A2KQ',6,0,0,0,0,0,0,0,475,0,0,0,0,0,0,0)
+          call W6E('A08D',6,6,6,6,135,145,155,165,475,475,475,475,0,0,0,0)
+          call W6E('A08A',8,8,8,8,115,125,135,145,475,475,475,475,0,0,0,0)
+          call W6E('A089',10,10,10,10,95,105,115,125,475,475,475,475,0,0,0,0)
+          call W6E('A00F',15,15,15,15,90,90,90,90,1150,1150,1150,1150,450,450,450,450)
+          call W6E('A01T',15,15,15,15,90,90,90,90,1000,1000,1000,1000,300,300,300,300)
+          call W6E('A007',15,15,15,15,90,90,90,90,850,850,850,850,150,150,150,150)
+          call W6E('A08I',5,5,5,5,50,50,50,50,600,600,600,600,0,0,0,0)
+          call W6E('A08G',10,10,10,10,50,50,50,50,600,600,600,600,0,0,0,0)
+          call W6E('A08F',15,15,15,15,50,50,50,50,600,600,600,600,0,0,0,0)
      elseif XOE=='Ntin' then
           call W6E('A049',$E,$E,$E,$E,95,120,$91,$AA,550,550,550,550,0,0,0,0)
           call W6E('A05E',25,25,25,25,120,$8C,$A0,$B4,0,0,0,0,$9C4,$9C4,$9C4,$9C4)
@@ -110141,7 +110141,7 @@ function R7d takes nothing returns nothing
      call SaveBoolean(ZCC,-'A010',0,true)
      call SaveReal(ZCC,-'A010',1,8)
      call SaveBoolean(ZCC,-'A011',0,true)
-     call SaveReal(ZCC,-'A011',1,$F)
+     call SaveReal(ZCC,-'A011',1,15)
      call SaveBoolean(ZCC,-'A013',1,true)
      call SaveReal(ZCC,-'A013',1,$8C)
      call SaveReal(ZCC,-'A013',2,120)
@@ -110259,7 +110259,7 @@ function R7d takes nothing returns nothing
      call SaveReal(ZCC,-'A04Q',2,35)
      call SaveReal(ZCC,-'A04Q',3,25)
      call SaveBoolean(ZCC,-'A04W',0,true)
-     call SaveReal(ZCC,-'A04W',1,$C)
+     call SaveReal(ZCC,-'A04W',1,12)
      call SaveReal(ZCC,-'A04Y',1,16)
      call SaveReal(ZCC,-'A04Y',2,$F)
      call SaveReal(ZCC,-'A04Y',3,$E)
@@ -111538,21 +111538,21 @@ function R7d takes nothing returns nothing
      call SaveReal(ZCC,-'A2SI',1,8)
      call SaveBoolean(ZCC,-'A2SI',0,true)
      call SaveReal(ZCC,-'A01V',1,25)
-     call SaveReal(ZCC,-'A007',1,$F)
+     call SaveReal(ZCC,-'A007',1,15)
      call SaveBoolean(ZCC,-'A007',0,true)
-     call SaveReal(ZCC,-'A01T',1,$F)
+     call SaveReal(ZCC,-'A01T',1,15)
      call SaveBoolean(ZCC,-'A01T',0,true)
-     call SaveReal(ZCC,-'A00F',1,$F)
+     call SaveReal(ZCC,-'A00F',1,15)
      call SaveBoolean(ZCC,-'A00F',0,true)
-     call SaveReal(ZCC,-'A089',1,$A)
+     call SaveReal(ZCC,-'A089',1,10)
      call SaveBoolean(ZCC,-'A089',0,true)
      call SaveReal(ZCC,-'A08A',1,8)
      call SaveBoolean(ZCC,-'A08A',0,true)
      call SaveReal(ZCC,-'A08D',1,6)
      call SaveBoolean(ZCC,-'A08D',0,true)
-     call SaveReal(ZCC,-'A08F',1,$F)
+     call SaveReal(ZCC,-'A08F',1,15)
      call SaveBoolean(ZCC,-'A08F',0,true)
-     call SaveReal(ZCC,-'A08G',1,$A)
+     call SaveReal(ZCC,-'A08G',1,10)
      call SaveBoolean(ZCC,-'A08G',0,true)
      call SaveReal(ZCC,-'A08I',1,5)
      call SaveBoolean(ZCC,-'A08I',0,true)
