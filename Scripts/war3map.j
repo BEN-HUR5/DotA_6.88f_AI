@@ -45389,17 +45389,17 @@ function ELD takes nothing returns boolean
                set IN4 = p5
                call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , Condition(function IgnitePrimaryTargets))
                set IN4 = null
-               set m5 = GroupPickRandomUnit(LQ7)
-               if m5 == null then
+               call GroupRemoveUnit(LQ7 , m5)
+               if FirstOfGroup(LQ7) == null then
                     set LQ7 = WS7()
                     set IN4 = p5
                     call GroupEnumUnitsInRange(LQ7 , GetUnitX(p5) , GetUnitY(p5) , 700 + 150 * GetUnitAbilityLevel(p5 , 'A088') , Condition(function IgniteSecondaryTargets))
                     set IN4 = null
-                    set m5 = GroupPickRandomUnit(LQ7)
                endif
+               set m5 = GroupPickRandomUnit(LQ7)
                if m5 != null then
                     set BB7=CreateUnit(GetOwningPlayer(p5),'e00E',GetUnitX(p5),GetUnitY(p5),0)
-                    call UnitApplyTimedLife(BB7,'BTLF',0.5)
+                    call UnitApplyTimedLife(BB7 , 'BTLF' , 10 + V77)
                     call XF7(BB7,E0D)
                     call SetUnitAbilityLevel(BB7,E0D,V77)
                     call IssueTargetOrderById(BB7,852662,m5)
