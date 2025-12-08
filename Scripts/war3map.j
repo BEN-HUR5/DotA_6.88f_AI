@@ -43332,15 +43332,13 @@ function ZQK5 takes nothing returns boolean
      local trigger t=GetTriggeringTrigger()
      local integer I97=GetHandleId(t)
      local unit IH7=(LoadUnitHandle(L7,(I97),(17)))
-     if XH7(IH7)then
-          call DestroyEffect((LoadEffectHandle(L7,(I97),(175))))
-          call DestroyEffect((LoadEffectHandle(L7,(I97),(176))))
-          call FlushChildHashtable(L7,(I97))
-          call OZ7(t)
-          call UnitRemoveAbility(IH7,'Abun')
-          call UnitRemoveAbility(IH7,'A2VD')
-          set J6I=null
-     endif
+     call DestroyEffect((LoadEffectHandle(L7,(I97),(175))))
+     call DestroyEffect((LoadEffectHandle(L7,(I97),(176))))
+     call FlushChildHashtable(L7,(I97))
+     call OZ7(t)
+     call UnitRemoveAbility(IH7,'Abun')
+     call UnitRemoveAbility(IH7,'A2VD')
+     set J6I=null
      set t=null
      set IH7=null
      return false
@@ -43540,7 +43538,7 @@ function R93 takes nothing returns nothing
 endfunction
 
 function R95 takes nothing returns boolean
-     if GetSpellAbilityId()=='A2V3' then
+     if GetSpellAbilityId() == 'A2V3' or GetSpellAbilityId() == 'A2XP' then
           if IsUnitEnemy(GetSpellTargetUnit(),GetOwningPlayer(GetTriggerUnit()))==false or WQ7(GetSpellTargetUnit())==false then
                call R93()
           endif
