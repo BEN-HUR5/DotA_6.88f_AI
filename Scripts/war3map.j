@@ -43527,8 +43527,9 @@ function R93 takes nothing returns nothing
      call SaveUnitHandle(L7,I97,17,(IH7))
      call SaveInteger(L7,I97,5,(BC7))
      call SaveEffectHandle(L7,I97,32,(AddSpecialEffectTarget("war3mapImported\\DarkMending.mdx",IH7,"origin")))
-     if IsUnitAlly(IH7,GetOwningPlayer(ZX7))then
-          call B67(ZX7 , IH7 , 1 , YJ7(YM7 , GetUnitState(IH7 , UNIT_STATE_LIFE) - 1))
+     if IsUnitAlly(IH7,GetOwningPlayer(ZX7)) then
+          call B67(ZX7 , IH7 , 1 , YM7)
+          call SetWidgetLife(IH7 , YK7(0.5 , GetWidgetLife(IH7)))
      else
           call B67(ZX7,IH7,1,YM7)
      endif
