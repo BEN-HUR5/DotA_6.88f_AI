@@ -43332,12 +43332,7 @@ function ZQK5 takes nothing returns boolean
      local trigger t=GetTriggeringTrigger()
      local integer I97=GetHandleId(t)
      local unit IH7=(LoadUnitHandle(L7,(I97),(17)))
-     if GetTriggerEventId()==EVENT_UNIT_DAMAGED then
-          call DisableTrigger(t)
-          call B67(GetEventDamageSource(),IH7,3,0.5*GetEventDamage())
-          call EnableTrigger(t)
-     endif
-     if GetTriggerEventId()!=EVENT_UNIT_DAMAGED or XH7(IH7)then
+     if XH7(IH7)then
           call DestroyEffect((LoadEffectHandle(L7,(I97),(175))))
           call DestroyEffect((LoadEffectHandle(L7,(I97),(176))))
           call FlushChildHashtable(L7,(I97))
@@ -43362,7 +43357,6 @@ function ZQL5 takes nothing returns nothing
      call XF7(IH7,'A2VD')
      call SetPlayerAbilityAvailable(GetOwningPlayer(IH7),'A2VD',false)
      call TriggerRegisterTimerEvent(t,2.5+0.5*BC7,false)
-     call TriggerRegisterUnitEvent(t,IH7,EVENT_UNIT_DAMAGED)
      call TriggerRegisterDeathEvent(t,IH7)
      call TriggerAddCondition(t,Condition(function ZQK5))
      call SaveUnitHandle(L7,(I97),(17),(IH7))
@@ -43536,7 +43530,7 @@ function R93 takes nothing returns nothing
      call SaveInteger(L7,I97,5,(BC7))
      call SaveEffectHandle(L7,I97,32,(AddSpecialEffectTarget("war3mapImported\\DarkMending.mdx",IH7,"origin")))
      if IsUnitAlly(IH7,GetOwningPlayer(ZX7))then
-          call B67(ZX7,IH7,3,R96(IH7,YM7))
+          call B67(ZX7 , IH7 , 1 , YJ7(YM7 , GetUnitState(IH7 , UNIT_STATE_LIFE) - 1))
      else
           call B67(ZX7,IH7,1,YM7)
      endif
@@ -43582,8 +43576,6 @@ function ZQR5 takes nothing returns boolean
      if QI>(BC7+6)*50 or GetTriggerEventId()==EVENT_WIDGET_DEATH then
           call DisableTrigger(t)
           call DestroyEffect((LoadEffectHandle(L7,(I97),(32))))
-          call UnitRemoveAbility(IH7,'A2VS')
-          call UnitRemoveAbility(IH7,'A2VR')
           if GetTriggerEventId()!=EVENT_WIDGET_DEATH then
                set UI5=UI5*2
                loop
@@ -43645,9 +43637,6 @@ function ZUO5 takes nothing returns nothing
      local trigger t=CreateTrigger()
      local integer I97=GetHandleId(t)
      local integer BC7=GetUnitAbilityLevel(ZX7,'A2V0')
-     call UnitRemoveAbility(IH7,'B09Y')
-     call XF7(IH7,'A2VS')
-     call XF7(IH7,'A2VR')
      call TriggerRegisterUnitEvent(t,IH7,EVENT_UNIT_DAMAGED)
      call TriggerRegisterDeathEvent(t,IH7)
      call TriggerRegisterTimerEvent(t,0.02,true)
