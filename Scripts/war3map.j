@@ -40463,7 +40463,7 @@ function LQR takes unit ZX7,unit m5 returns nothing
      call SaveUnitHandle(L7,LTR,30,m5)
      call SaveBoolean(L7 , LTR , 'A0QN' , LoadInteger(L7 , GetHandleId(m5) , 'A0QN') == 0)
      call SaveInteger(L7 , GetHandleId(m5) , 'A0QN' , LoadInteger(L7 , GetHandleId(m5) , 'A0QN') + 1)
-     call B67(ZX7 , ZX7 , 1 , YJ7(15 , GetWidgetLife(ZX7) - 1))
+     call B67(ZX7 , ZX7 , 1 , YJ7(15 , GetWidgetLife(ZX7) - 0.5))
      call SaveEffectHandle(L7,LTR,31,AddSpecialEffectTarget("Abilities\\Spells\\Other\\BreathOfFire\\BreathOfFireDamage.mdl",m5,"chest"))
      set t=null
 endfunction
@@ -43528,8 +43528,7 @@ function R93 takes nothing returns nothing
      call SaveInteger(L7,I97,5,(BC7))
      call SaveEffectHandle(L7,I97,32,(AddSpecialEffectTarget("war3mapImported\\DarkMending.mdx",IH7,"origin")))
      if IsUnitAlly(IH7,GetOwningPlayer(ZX7)) then
-          call B67(ZX7 , IH7 , 1 , YM7)
-          call SetWidgetLife(IH7 , YK7(0.5 , GetWidgetLife(IH7)))
+          call B67(ZX7 , IH7 , 1 , YJ7(GetWidgetLife(IH7) - 0.5 , YM7))
      else
           call B67(ZX7,IH7,1,YM7)
      endif
@@ -53424,23 +53423,14 @@ endfunction
 
 function R0D takes nothing returns nothing
      local integer BC7=GetUnitAbilityLevel(GetTriggerUnit(),'A055')
-     local integer R5D=GetRandomInt((BC7+1)/2,(BC7+4)/2)
+     local integer R5D = GetRandomInt((BC7 + 1) / 2 , 2 + BC7 / 2)
      local unit S79=GetTriggerUnit()
      local unit IH7=GetSpellTargetUnit()
      local location XX8=GetUnitLoc(S79)
-     local real VW9=50+BC7*25
+     local real VW9 = 50 + 25 * BC7 + 62.5 * (1 + BC7 % 2) * (2 + BC7 / 2 - R5D)
      local trigger t=CreateTrigger()
      local integer I97=GetHandleId(t)
      local unit BB7=CreateUnit(GetOwningPlayer(S79),'e00E',GetUnitX(S79),GetUnitY(S79),0)
-     if BC7==1 then
-          set VW9=VW9+(2-R5D)*125
-     elseif BC7==2 then
-          set VW9=VW9+(3-R5D)*62.5
-     elseif BC7==3 then
-          set VW9=VW9+(3-R5D)*125
-     elseif BC7==4 then
-          set VW9=VW9+(4-R5D)*62.5
-     endif
      call TriggerRegisterTimerEvent(t,$A,false)
      call TriggerRegisterUnitEvent(t,IH7,EVENT_UNIT_DAMAGED)
      call TriggerAddCondition(t,Condition(function R1D))
