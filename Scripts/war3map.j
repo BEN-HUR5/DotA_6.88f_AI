@@ -53427,7 +53427,7 @@ function R0D takes nothing returns nothing
      local unit S79=GetTriggerUnit()
      local unit IH7=GetSpellTargetUnit()
      local location XX8=GetUnitLoc(S79)
-     local real VW9 = 50 + 25 * BC7 + 62.5 * (1 + BC7 % 2) * (2 + BC7 / 2 - R5D)
+     local real VW9 = 50 + 25 * BC7 + 62.5 * (1 + ModuloInteger(BC7 , 2)) * (2 + BC7 / 2 - R5D)
      local trigger t=CreateTrigger()
      local integer I97=GetHandleId(t)
      local unit BB7=CreateUnit(GetOwningPlayer(S79),'e00E',GetUnitX(S79),GetUnitY(S79),0)
