@@ -61867,23 +61867,15 @@ function EXE takes nothing returns boolean
      local integer YC7=GetHandleId(ZX7)
      local group g
      local unit IH7
-     local real YM7
+     local real YM7 = 6 * GetUnitAbilityLevel(ZX7 , 'A06K')
      if (GetTriggerEventId()==EVENT_WIDGET_DEATH)==false then
-          set YM7=1.5*GetUnitAbilityLevel(ZX7,'A06K')
-          call SetWidgetLife(ZX7,YM7+GetWidgetLife(ZX7))
-          call DestroyEffect(AddSpecialEffectTarget("war3mapImported\\SpellFizzle.mdx",ZX7,"overhead"))
-          set IN4=ZX7
-          set g=WS7()
+          set g = WS7()
+          set IN4 = ZX7
           call GroupEnumUnitsInRange(g,GetUnitX(ZX7),GetUnitY(ZX7),250,Condition(function BI7))
           loop
                set IH7=FirstOfGroup(g)
                exitwhen IH7==null
-                    if IsUnitType(IH7,UNIT_TYPE_HERO) then
-                         call SetWidgetLife(ZX7,YM7+GetWidgetLife(ZX7))
-                    else
-                         call SetWidgetLife(ZX7,YM7*0.2+GetWidgetLife(ZX7))
-                    endif
-               call DestroyEffect(AddSpecialEffectTarget("war3mapImported\\SpellFizzle.mdx",ZX7,"overhead"))
+               call B67(ZX7 , IH7 , 1 , YM7)
                call GroupRemoveUnit(g,IH7)
           endloop
           call WR7(g)
@@ -61930,14 +61922,10 @@ function R3v takes nothing returns nothing
      local unit ZX7=GetTriggerUnit()
      if (GetIssuedOrderId()==852177) then
           call XF7(ZX7,'A0AZ')
-          if GetUnitAbilityLevel(ZX7,'A2VW')==1 then
-               call EYE(ZX7,true)
-          endif
+          call EYE(ZX7,true)
      elseif (GetIssuedOrderId()==852178) then
           call UnitRemoveAbility(ZX7,'A0AZ')
-          if GetUnitAbilityLevel(ZX7,'A2VW')==1 then
-               call EYE(ZX7,false)
-          endif
+          call EYE(ZX7,false)
      endif
      set ZX7=null
 endfunction
