@@ -53398,7 +53398,7 @@ function R1D takes nothing returns boolean
      elseif GetEventDamageSource()==BB7 then
           set tt=CreateTextTag()
           call YW7(I2S(BZ7),BZ7,IH7,.03,$7F,$7F,$FF,$FF)
-          call SetTextTagText(tt,"+"+I2S(R2I(VW9)),.025)
+          call SetTextTagText(tt,"+"+R2S(VW9),.025)
           call SetTextTagPosUnit(tt,IH7,$A)
           call SetTextTagColor(tt,$FF,0,0,$FF)
           call SetTextTagVelocity(tt,0,.0355)
@@ -62156,11 +62156,6 @@ function FEE takes nothing returns boolean
      local real x
      local real y
      if F8E<18+2*V77 then
-          if F8E == 16 then
-               call SetUnitTurnSpeed(WI7 , 0.7)
-               call SetUnitMoveSpeed(WI7 , 285)
-               call UnitRemoveAbility(WI7 , 'Abun')
-          endif
           set F8E=F8E+1
           call NP7(OB7,"LinkNumber",F8E)
           set x=GetUnitX(WI7)+F8E*50*Cos(l4*bj_DEGTORAD)
@@ -62213,6 +62208,18 @@ function FEE takes nothing returns boolean
      return false
 endfunction
 
+function meatHook takes nothing returns nothing
+     local trigger t = GetTriggeringTrigger()
+     local unit WI7 = O77(GetHandleId(t) , "Hero")
+     call SetUnitTurnSpeed(WI7 , 0.7)
+     call SetUnitMoveSpeed(WI7 , 285)
+     call UnitRemoveAbility(WI7 , 'Abun')
+     call NM7(GetHandleId(t))
+     call OZ7(t)
+     set t = null
+     set WI7 = null
+endfunction
+
 function FHE takes nothing returns nothing
      local unit WI7=GetTriggerUnit()
      local location l=GetSpellTargetLoc()
@@ -62221,7 +62228,7 @@ function FHE takes nothing returns nothing
      local trigger t=CreateTrigger()
      local integer OB7=GetHandleId(t)
      call SetUnitTurnSpeed(WI7 , 0)
-     call SetUnitMoveSpeed(WI7 , 1)
+     call SetUnitMoveSpeed(WI7 , 0)
      call UnitAddAbility(WI7 , 'Abun')
      call NT7(OB7,"Hero",WI7)
      call NP7(OB7,"Level",V77)
@@ -62230,6 +62237,10 @@ function FHE takes nothing returns nothing
      call NV7(OB7,"RetractTrigger",CreateTrigger())
      call TriggerRegisterTimerEvent(t,.03,true)
      call TriggerAddCondition(t,Condition(function FEE))
+     set t = CreateTrigger()
+     call NT7(GetHandleId(t) , "Hero" , WI7)
+     call TriggerRegisterTimerEvent(t , 0.53 , false)
+     call TriggerAddAction(t , function meatHook)
      call RemoveLocation(l)
      set WI7=null
      set l=null
