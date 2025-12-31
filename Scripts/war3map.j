@@ -61872,6 +61872,11 @@ function EXE takes nothing returns boolean
           set g = WS7()
           set IN4 = ZX7
           call GroupEnumUnitsInRange(g,GetUnitX(ZX7),GetUnitY(ZX7),250,Condition(function BI7))
+          if GetUnitAbilityLevel(ZX7 , 'A2VW') == 1 then
+               call DestroyEffect(AddSpecialEffectTarget("war3mapImported\\SpellFizzle.mdx",ZX7,"overhead"))
+               call SetWidgetLife(ZX7 , 0.25 * YM7 + GetWidgetLife(ZX7))
+          endif
+          call B67(ZX7 , ZX7 , 1 , YM7)
           loop
                set IH7=FirstOfGroup(g)
                exitwhen IH7==null
